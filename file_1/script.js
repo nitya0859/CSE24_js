@@ -22,4 +22,25 @@ getData();
 fetch('https://jsonplaceholder.typicode.com/posts')
     .then(response => response.json())
     .then(data => console.log(data))
-    .catch(error => console.error(error));
+    .catch(error => console.error(error)); //multiple .then but last step is .catch 
+
+//Error handling with try/catch
+try{
+    var x=y+10;
+}
+catch(error){
+    console.log(error.message);
+}
+
+//local storage
+localStorage.setItem('name','Jeet');
+//retrieve data
+var name1=localStorage.getItem('name');
+console.log(name1);
+
+//remove data
+localStorage.removeItem('name');
+
+//Store object
+var user={name:'Jeet',age:30};
+localStorage.setItem('user',JSON.stringify(user));
